@@ -87,7 +87,7 @@ resource "azurerm_virtual_machine" "catapp" {
   resource_group_name = "${azurerm_resource_group.myresourcegroup.name}"
   vm_size             = "${var.vm_size}"
   tags = {
-    environment = "${var.environment}"
+    environment = "${var.tag_env}"
   }
 
   network_interface_ids         = ["${azurerm_network_interface.catapp-nic.id}"]
